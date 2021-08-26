@@ -1,0 +1,37 @@
+<docktype html>
+    <html lang="en">
+
+    <head>
+        <title>{{name}}</title>
+        <style>
+            .badge {
+                box-sizing: border-box;
+                display: inline-block;
+                min-width: 10px;
+                padding: 3px 7px;
+                font-weight: 700;
+                line-height: 1;
+                vertical-align: baseline;
+                white-space: nowrap;
+                text-align: center;
+                background-color: rgb(78, 77, 74);
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="content">
+            <h2><a href="https://openweathermap.org/city/{{id}}">{{name}}, {{sys.country}} </a> <b><i>
+                        {{weather.0.description}} </i></b></h2>
+            <h2>
+                <p class="badge">{{main.temp}} C </p> Temperature from {{main.temp_min}} to {{main.temp_max}} C, Wind
+                {{wind.speed}} m/s, Cloud {{clouds.all}} %, {{main.pressure}} hPa
+            </h2>
+            <h2>Geo coords <a href="https://openweathermap.org/weathermap?zoom=12&lat={{coord.lat}}&lon={{coord.lon}}">
+                    [
+                    {{coord.lat}}, {{coord.lon}} ] </a> </h2>
+        </div>
+    </body>
+
+    </html>
